@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach(item => item.style.backgroundColor = "");
 
       // 현재 인덱스 하이라이트
-      items[currentIndex].style.backgroundColor = "#33B5E5";
-      items[currentIndex].style.color = "#fff";
+      items[currentIndex].style.backgroundColor = "#e9caf1e0";
 
       currentIndex = (currentIndex + 1) % items.length;
       round++;
@@ -57,8 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach(item => item.style.backgroundColor = "");
 
       // 현재 인덱스 하이라이트
-      items[currentIndex].style.backgroundColor = "#33B5E5";
-      items[currentIndex].style.color = "#fff";
+      items[currentIndex].style.backgroundColor = "#e9caf1e0";
       currentIndex = (currentIndex + 1) % items.length;
       round++;
 
@@ -68,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 랜덤 멈춤 위치
         const stopIndex = Math.floor(Math.random() * items.length);
-        items[stopIndex].style.backgroundColor = "#33B5E5"; //선택된 부분 색깔
+        items[stopIndex].style.backgroundColor = "#e9caf1e0"; //선택된 부분 색깔
         items[stopIndex].style.color = "#fff";
         
         showResult(items[stopIndex]);
