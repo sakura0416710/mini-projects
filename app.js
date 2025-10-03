@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "꾸안꾸 미우미우걸": "/image/miumiu2.jpeg",
   "성수동 점령가능룩": "/image/bm.jpeg",
   "퇴근하고 한남동으로 모여": "/image/balenciaga.jpeg",
+  "미우미우인간의 가을룩": "/image/miumiu3.jpeg",
   "인스타 여신은 바로 나": "/image/bm2.jpeg",
   "고어텍스 한 스푼": "/image/act2.jpeg",
   "편하고 멋지고 다해버려": "/image/act1.jpeg",
