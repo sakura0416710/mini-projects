@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>오늘의 추구미</title>
+
+    <!-- 공통 UI -->
+    <link rel="stylesheet" href="./globalUI.css" />
+    <!-- JS -->
+    <script src="./app.js" defer></script> <!-- 화면 전환용 -->
+  </head>
+
+  <body>
+    <main class="iphone-plus" role="main">
+
+      <!-- ===== 화면1 : 메인 ===== -->
+      <section id="screen-main" class="main-screen" style="display: none;">
+        <div class="game-area" aria-label="메인 영역">
+          <img class="background-image" src="../룰렛 아이템/사각형.png" alt="배경 이미지" />
+          <div class="main-title-wrapper">
+            <h1 class="main-title">오늘의 추구미를 골라줄게</h1>
+          </div>
+          <div class="start-button-wrapper">
+            <button id="start-button" class="start-button" type="button" aria-label="게임 시작">
+              <img class="main-start-btn" src="../룰렛 아이템/start버튼.png" alt="시작버튼" aria-hidden="true" />
+              <span class="main-start">START!</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ===== 화면2 : 리스트 ===== -->
+      <section id="screen-list" class="list-main-content" style="display: none;">
+        <article class="div-list" role="article" aria-labelledby="fashion-list-title">
+          <img class="background-image" src="../룰렛 아이템/사각형.png" alt="배경 이미지" />
+          <nav class="roulette-list" role="navigation" aria-label="패션 카테고리">
+            <h2 class="list-title" id="fashion-list-title"></h2>
+          </nav>
+
+          <!-- ====== 리스트 아이템 ====== -->
+          <div class="roulette-list-container">
+              <h3>오늘의 커리어우먼은 바로 나!</h3>
+              <h3>깔끔 러블리걸</h3>
+              <h3>미우미우 인간의 가을룩</h3>
+              <h3>올화이트로 시선강탈미</h3>
+              <h3>말해뭐해 가을의 르메르</h3>
+              <h3>디테일의 신</h3>
+              <h3>도쿄 멋쟁이</h3>
+              <h3>쟤니? 죄니..</h3>
+              <h3>트위드로 종결</h3>
+              <h3>추워도 멋은 포기모태</h3>
+              <h3>러블리의 인간화</h3>
+              <h3>이 구역 깜찍 큩걸</h3>
+              <h3>러블리 으른ver.</h3>
+              <h3>꾸안꾸 미우미우걸</h3>
+              <h3>성수동 점령가능룩</h3>
+              <h3>퇴근하고 한남동으로</h3>
+              <h3>인스타 여신은 바로 나</h3>
+              <h3>고어텍스 한 스푼</h3>
+              <h3>편하고 멋지고 다하기</h3>
+              <h3>당신의 고급미에 치얼스</h3>
+              <h3>Back to 90's</h3>
+              <h3>차분한 블랙&화이트</h3>
+              <h3>용기가 필요한 Girl~</h3>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== 화면3 : 결과 ===== -->
+      <section id="screen-result" class="screen-result">
+        <article class="div-result" role="article" aria-labelledby="main-title">
+          <img class="background-image" src="../룰렛 아이템/사각형.png" alt="배경이미지" id="result-image"/>
+          <div class="result-image-wrapper">
+            <img class="result-image" src="../룰렛 아이템/르메르.jpeg" alt="결과이미지" id="result-image"/>
+          <header class="result-name">
+            <h1 class="result-title" id="result-title"></h1>
+          </header>
+        </article>
+      </section>
+
+      <!-- ===== 공통 네비게이션 ===== -->
+      <section class="ellipse" aria-label="Menu control area"></section>
+      <h1 class="text-wrapper">
+        <div class="menu">MENU</div>
+      </h1>
+      <div class="ellipse-2" role="button" tabindex="0" aria-label="Menu center button"></div>
+      <button class="next1" type="button" aria-label="Next item">
+         <img src="../룰렛 아이템/play1_icon.png" alt="다음"/>
+      </button>
+      <button class="next2" type="button" aria-label="Next item2">
+         <img src="../룰렛 아이템/play1_icon.png" alt="다음2"/>
+      </button>
+      <button class="img" type="button" aria-label="Previous item">
+        <img src="../룰렛 아이템/play_reverse_icon.png" alt="이전" />
+      </button>
+      <button class="play-arrow-filled-2" aria-hidden="true">
+        <img src="../룰렛 아이템/play_reverse_icon.png" alt="이전2" />
+      </button>
+
+      <!-- 하단 재생 버튼 -->
+      <button class="play-button" type="button" aria-label="Play">
+        <img src="../룰렛 아이템/play1_icon.png" alt="재생" />
+      </button>
+       <button class="pause-button" type="button" aria-label="pause">
+        <img src="../룰렛 아이템/pause.png" alt="일시정지" />
+      </button>
+
+
+      <img class="image" src="../룰렛 아이템/핑크리본.png" alt="리본"/>
+      <img class="image-2" src="../룰렛 아이템/까만옷입은 헬로키티.png" alt="헬로키티"/>
+      <img class="element" src="../룰렛 아이템/네잎클로버2.png" alt="클로버"/>
+      <img class="image-3" src="../룰렛 아이템/하트.png" alt="중앙 장식 이미지" />
+      <img class="image-4" src="../룰렛 아이템/수박.png" alt="수박"/>
+      <img class="image-5" src="../룰렛 아이템/별.png" alt="별"/>
+      <img class="image-6" src="../룰렛 아이템/딸기 헬로키티.png" alt="딸기 헬로키티"/>
+      <img class="image-7" src="../룰렛 아이템/헬로키티 당고.png" alt="헬로키티 당고"/>
+      <img class="image-8" src="../룰렛 아이템/헬로키티 팬케이크.png" alt="헬로키티 팬케이크"/>
+      <img class="image-9" src="../룰렛 아이템/별.png" alt="별"/>
+    </main>
+  </body>
+</html>

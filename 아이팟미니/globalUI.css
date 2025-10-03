@@ -1,0 +1,558 @@
+@font-face {
+font-family: 'RoundedFixedsys';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+font-weight: normal;
+font-display: swap;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  font-family: 'RoundedFixedsys';
+}
+
+.iphone-plus {
+  background-color: #ffffff;
+  width: 100%;
+  min-width: 428px;
+  min-height: 926px;
+  position: relative;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+/* ===========main CSS====================*/
+.iphone-plus .main-screen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 122px;
+  left: 12px;
+  width: 404px;
+  height: 662px;
+  background-color: #cfcdcec9;
+  justify-content: space-between; /* 상단-하단 사이 공간 확보 */
+
+}
+
+.iphone-plus .game-area
+{
+  position:relative
+}
+.iphone-plus .game-area .background-image {
+    top: 149px;
+    left: 26px;
+    width: 376px;
+    height: 304px;
+    overflow: hidden;
+    object-fit: cover;          /* 이미지 잘림 없이 꽉 차게 */
+    display: block;
+    margin: 0 auto;             /* 가로 중앙 */
+    z-index: 0; 
+    margin-top:13px;
+}
+
+.main-title-wrapper {
+  flex-direction: column;
+  position: absolute;       /* 이미지 위에 올리기 */
+  bottom:-90px;               /* 이미지 위쪽 위치 조절 */
+  left:0;
+  width:100%;
+  height:100%;
+  padding:10px;
+  box-sizing: border-box;
+  display: flex;
+  z-index: 1;               /* 이미지보다 위 */
+  text-align: center;
+}
+.main-title{
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  line-height: normal;
+}
+
+.start-button-wrapper{
+  position: absolute;       /* 이미지 위에 올리기 */
+  bottom:-40px;                /* 이미지 위쪽 위치 조절 */
+  left:0;
+  width:100%;
+  height:100%;
+  padding:10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* 위쪽부터 나열 */
+  z-index: 1;               /* 이미지보다 위 */
+  text-align: center;
+}
+
+.main-start {
+  font-family: RoundedFixedsys;
+  z-index: 1;      /* 이미지보다 위 */
+  font-weight: 400;
+  color: #000000;
+  font-size: 25px;
+  line-height: normal;
+  position: absolute; 
+  top: 49%;      /* 세로 중앙 */
+  left: 53%;     /* 가로 중앙 */
+  transform: translate(-50%, -50%); /* 정확한 중앙 */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6); /* 가독성 보정 */
+}
+.start-button{
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+}
+.main-start-btn {
+  left: 150px;
+  width: 140px;
+  height: 35px;
+}
+.start-button:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.start-button:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.main-intro-section {
+  position: relative;
+}
+
+.menu-control {
+  position: relative;
+}
+
+.control-center {
+  position: relative;
+}
+
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+  .iphone-plus {
+    min-width: 320px;
+  }
+
+  .game-area {
+    left: 8px;
+    width: calc(100% - 16px);
+  }
+
+  .img {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .main-title,
+  .main-start {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .start-button:hover,
+  .nav-button:hover,
+  .character-item {
+    transition: none;
+    transform: none;
+  }
+}
+
+
+/* ===============list.css=================*/
+
+.list-main-content {
+  position: absolute;
+  top: 122px;
+  left: 12px;
+  width: 404px;
+  height: 662px;
+  background-color: #cfcdcec9;
+}
+.iphone-plus .div-list
+{
+  position:relative
+}
+.iphone-plus .div-list .background-image {
+    top: 149px;
+    left: 26px;
+    width: 376px;
+    height: 304px;
+    overflow: hidden;
+    object-fit: cover;          /* 이미지 잘림 없이 꽉 차게 */
+    display: block;
+    margin: 0 auto;             /* 가로 중앙 */
+    z-index: 0; 
+    margin-top:13px;
+
+}
+.iphone-plus .div-list .roulette-list-container {
+  position: absolute;       /* 이미지 위에 올리기 */
+  top: 0;                /* 이미지 위쪽 위치 조절 */
+  left:0;
+  width:100%;
+  height:100%;
+  padding:10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start; /* 위쪽부터 나열 */
+  align-items: center;         /* 가로 중앙 */
+  flex-direction: column;   /* 세로 나열 */
+  gap: 5px;                 /* 글씨 사이 간격 */
+  z-index: 1;               /* 이미지보다 위 */
+  overflow-y: auto;
+   scrollbar-width: none;       /* Firefox: 스크롤바 숨김 */
+  -ms-overflow-style: none;    /* IE/Edge: 스크롤바 숨김 */
+  -webkit-scrollbar: none;  /* Chrome/Safari: 스크롤바 숨김 */
+}
+
+/* 개별 아이템 */
+.iphone-plus .div-list .roulette-list-container h3 {
+  margin: 0;
+  padding: 2px 0;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+}
+
+.iphone-plus .ellipse {
+  position: absolute;
+  top: 495px;
+  left: 80px;
+  width: 264px;
+  height: 251px;
+  background-color: #fcfcfc;
+  border-radius: 132px / 125.5px;
+}
+
+.iphone-plus .text-wrapper {
+  position: absolute;
+  top: 522px;
+  left: 171px;
+  width: 82px;
+  -webkit-text-stroke: 1px #5f5e5e40;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #5e5d5d;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.iphone-plus .ellipse-2 {
+  position: absolute;
+  top: 575px;
+  left: 166px;
+  width: 95px;
+  height: 92px;
+  background-color: #d9d9d9;
+  border-radius: 47.5px / 46px;
+}
+
+.next1 {
+  position: absolute;
+  top: 609px;
+  left: 311px;
+  width: 24px;
+  height: 24px;
+}
+.next2{
+  position: absolute;
+  top: 609px;
+  left: 300px;
+  width: 24px;
+  height: 24px;
+}
+
+.img {
+  left: 92px;
+  position: absolute;
+  top: 609px;
+  width: 24px;
+  height: 24px;
+}
+/* 하단 재생 버튼 */
+.play-button img{
+  position: absolute;
+  bottom: 20px; /* 화면 하단에서 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  bottom: 200px;
+  left: 205px;
+}
+.pause-button img{
+  position: absolute;
+  bottom: 20px; /* 화면 하단에서 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  bottom: 195px;
+  left: 218px;
+}
+
+
+.play-arrow-filled-2 {
+  left: 103px;
+  position: absolute;
+  top: 609px;
+  width: 24px;
+  height: 24px;
+}
+
+
+/*스티커 부분*/
+.iphone-plus .image {
+  position: absolute;
+  top: 453px;
+  left: 15px;
+  width: 88px;
+  height: 84px;
+  aspect-ratio: 1.08;
+}
+
+.iphone-plus .image-2 {
+  position: absolute;
+  top: 690px;
+  left: 12px;
+  width: 85px;
+  height: 86px;
+  aspect-ratio: 0.99;
+}
+
+.iphone-plus .element {
+  position: absolute;
+  top: 517px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1.02;
+}
+
+.iphone-plus .image-3 {
+  position: absolute;
+  top: 578px;
+  left: 162px;
+  width: 102px;
+  height: 86px;
+  aspect-ratio: 1.19;
+}
+
+.iphone-plus .image-4 {
+  position: absolute;
+  top: 702px;
+  left: 340px;
+  width: 88px;
+  height: 88px;
+  aspect-ratio: 1.02;
+}
+
+.iphone-plus .image-5 {
+  position: absolute;
+  top: 453px;
+  left: 368px;
+  width: 48px;
+  height: 42px;
+  aspect-ratio: 1.14;
+}
+
+.iphone-plus .image-6 {
+  position: absolute;
+  top: 478px;
+  left: 325px;
+  width: 70px;
+  height: 90px;
+  aspect-ratio: 0.77;
+}
+
+.iphone-plus .image-7 {
+  position: absolute;
+  top: 695px;
+  left: 291px;
+  width: 78px;
+  height: 81px;
+  aspect-ratio: 0.91;
+}
+
+.iphone-plus .image-8 {
+  position: absolute;
+  top: 649px;
+  left: 344px;
+  width: 64px;
+  height: 53px;
+  aspect-ratio: 1.21;
+}
+
+.iphone-plus .image-9 {
+  position: absolute;
+  top: 727px;
+  left: 84px;
+  width: 55px;
+  height: 48px;
+  aspect-ratio: 1.14;
+}
+
+.next1,
+.next2,
+.play-arrow-filled-2,
+.img {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next1,
+.next2,
+.play-arrow-filled-2,
+.img:hover {
+  cursor: pointer;
+}
+
+/* Focus management for interactive elements */
+.iphone-plus [role="button"] {
+  cursor: pointer;
+}
+
+.iphone-plus [role="button"]:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Responsive considerations while maintaining pixel-perfect design */
+@media (max-width: 428px) {
+  .iphone-plus {
+    min-width: 320px;
+  }
+}
+
+/* Accessibility improvements for screen readers */
+.iphone-plus [aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Enhanced button states */
+.iphone-plus button:active {
+  transform: scale(0.95);
+}
+
+.iphone-plus button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/*========================================*/
+
+
+/* ===============result.css=================*/
+.screen-result {
+  position: absolute;
+  top: 122px;
+  left: 12px;
+  width: 404px;
+  height: 662px;
+  background-color: #cfcdcec9;
+}
+
+.div-result .background-image{
+    top: 149px;
+    left: 26px;
+    width: 376px;
+    height: 304px;
+    overflow: hidden;
+    object-fit: cover;          /* 이미지 잘림 없이 꽉 차게 */
+    display: block;
+    margin: 0 auto;             /* 가로 중앙 */
+    z-index: 0; 
+    margin-top:13px;
+}
+
+.div-result
+{
+  position:relative
+}
+.result-image-wrapper{
+  position: absolute;       /* 이미지 위에 올리기 */
+  top: 0;                /* 이미지 위쪽 위치 조절 */
+  left:0;
+  width:100%;
+  height:100%;
+  padding:10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start; /* 위쪽부터 나열 */
+  align-items: center;         /* 가로 중앙 */
+  flex-direction: column;   /* 세로 나열 */
+  gap: 5px;                 /* 글씨 사이 간격 */
+  z-index: 1;               /* 이미지보다 위 */
+  overflow-y: auto;
+   scrollbar-width: none;       /* Firefox: 스크롤바 숨김 */
+  -ms-overflow-style: none;    /* IE/Edge: 스크롤바 숨김 */
+  -webkit-scrollbar: none;  /* Chrome/Safari: 스크롤바 숨김 */
+}
+.result-image-wrapper img{
+  top:13px;
+  height: 230px;
+  width:230px;
+  margin: 0 auto;             /* 가로 중앙 */
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  object-fit: contain;
+  object-position: center;
+}
+.result-name{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .iphone-plus {
+    min-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iphone-plus button:hover {
+    transform: none;
+    transition: none;
+  }
+
+  .iphone-plus button:active {
+    transform: none;
+  }
+}
