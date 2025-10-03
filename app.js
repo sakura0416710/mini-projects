@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach(item => item.style.backgroundColor = "");
 
       // 현재 인덱스 하이라이트
-      items[currentIndex].style.backgroundColor = "yellow";
+      items[currentIndex].style.backgroundColor = "#33B5E5";
+      items[currentIndex].style.color = "#fff";
 
       currentIndex = (currentIndex + 1) % items.length;
       round++;
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 현재 인덱스 하이라이트
       items[currentIndex].style.backgroundColor = "#33B5E5";
-
+      items[currentIndex].style.color = "#fff";
       currentIndex = (currentIndex + 1) % items.length;
       round++;
 
@@ -81,28 +82,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //2-1. 리스트 객체 관리
   const itemImageMap = {
-  "오늘의 커리어우먼은 바로 나": "./image/더로우2.png",
-  "깔끔 러블리걸": "./image/더로우3.png",
-  "올화이트룩": "./image/더로우.png",
-  "말해뭐해 가을의 르메르": "./image/르메르.png",
-  "디테일의 신": "./image/르메르2.png",
-  "도쿄 멋쟁이": "./image/나나미카.png",
-  "쟤니?죄니": "./image/샤넬.png",
-  "트위드로 종결": "./image/샤넬2.png",
-  "추위도 멋은 포기모태": "./image/비비안웨스트우드.png",
-  "러블리의 인간화": "./image/슈슈통.png",
-  "이 구역 깜찍큩걸": "./image/미우미우.png",
-  "러블리 으른ver": "./image/슈슈통2.png",
-  "꾸안꾸 미우미우걸": "./image/미우미우2.png",
-  "성수동 점령가능룩": "./image/브랜디멜빌.png",
-  "퇴근하고 한남동으로 모여": "./image/발렌시아가.png",
-  "인스타 여신은 바로 나": "./image/브랜디멜빌2.png",
-  "고어텍스 한 스푼": "./image/아크테릭스2.png",
-  "편하고 멋지고 다해버려": "./image/아크테릭스1.png",
-  "당신의 고급미에 치얼스": "./image/입생로랑.png",
-  "Back to 90's": "./image/질샌더.png",
-  "차분한 블랙 & 화이트": "./image/프라다.png",
-  "용기가 필요한 Girl": "./image/프라다2.png"
+  "오늘의 커리어우먼은 바로 나": "/image/더로우2.png",
+  "깔끔 러블리걸": "/image/더로우3.png",
+  "올화이트룩": "/image/더로우.png",
+  "말해뭐해 가을의 르메르": "/image/르메르.png",
+  "디테일의 신": "/image/르메르2.png",
+  "도쿄 멋쟁이": "/image/나나미카.png",
+  "쟤니?죄니": "/image/샤넬.png",
+  "트위드로 종결": "/image/샤넬2.png",
+  "추위도 멋은 포기모태": "/image/비비안웨스트우드.png",
+  "러블리의 인간화": "/image/슈슈통.png",
+  "이 구역 깜찍큩걸": "/image/미우미우.png",
+  "러블리 으른ver": "/image/슈슈통2.png",
+  "꾸안꾸 미우미우걸": "/image/미우미우2.png",
+  "성수동 점령가능룩": "/image/브랜디멜빌.png",
+  "퇴근하고 한남동으로 모여": "/image/발렌시아가.png",
+  "인스타 여신은 바로 나": "/image/브랜디멜빌2.png",
+  "고어텍스 한 스푼": "/image/아크테릭스2.png",
+  "편하고 멋지고 다해버려": "/image/아크테릭스1.png",
+  "당신의 고급미에 치얼스": "/image/입생로랑.png",
+  "Back to 90's": "/image/질샌더.png",
+  "차분한 블랙 & 화이트": "/image/프라다.png",
+  "용기가 필요한 Girl": "/image/프라다2.png"
 };
 
 
@@ -117,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultTitle.textContent = itemName;
 
     // 매핑 객체에서 이미지 경로 가져오기
-    const imgPath = itemImageMap[itemName] || "./image/default.png"; 
+    const imgPath = itemImageMap[itemName] || "/image/default.png"; 
     resultImage.src = imgPath;
   }, 1000);
 }
