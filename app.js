@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "당신의 고급미에 치얼스": "/image/ysl.jpeg",
   "Back to 90's": "/image/jil_sander.jpeg",
   "차분한 블랙 & 화이트": "/image/prada.jpeg",
-  "용기가 필요한 Girl": "/image/2.jpeg"
+  "용기가 필요한 Girl": "/image/prada2.jpeg"
 };
 
 
