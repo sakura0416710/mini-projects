@@ -86,12 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
   "말해뭐해 가을의 르메르": "https://sakura0416710.github.io/mini-projects/image/remaire2.png",
   "디테일의 신": "https://sakura0416710.github.io/mini-projects/image/remaire2.png",
   "도쿄 멋쟁이": "https://sakura0416710.github.io/mini-projects/image/nanamica.png",
-  "쟤니?죄니": "https://sakura0416710.github.io/mini-projects/image/chanel.png",
+  "쟤니?죄니": "https://sakura0416710.github.io/mini-projects/image/chanel.jpeg",
   "트위드로 종결": "https://sakura0416710.github.io/mini-projects/image/chanel2.png",
   "추위도 멋은 포기모태": "https://sakura0416710.github.io/mini-projects/image/vvw.png",
   "러블리의 인간화": "https://sakura0416710.github.io/mini-projects/image/shushu.png",
   "이 구역 깜찍큩걸": "https://sakura0416710.github.io/mini-projects/image/miumiu.png",
-  "러블리 으른ver": "https://sakura0416710.github.io/mini-projects/image/shushu2.png",
+  "러블리 으른ver": "https://sakura0416710.github.io/mini-projects/image/shushu2.jpeg",
   "꾸안꾸 미우미우걸": "https://sakura0416710.github.io/mini-projects/image/miumiu2.png",
   "성수동 점령가능룩": "https://sakura0416710.github.io/mini-projects/image/bm.png",
   "퇴근하고 한남동으로 모여": "https://sakura0416710.github.io/mini-projects/image/balenciaga.png",
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "당신의 고급미에 치얼스": "https://sakura0416710.github.io/mini-projects/image/ysl.png",
   "Back to 90's": "https://sakura0416710.github.io/mini-projects/image/jil_sander.png",
   "차분한 블랙 & 화이트": "https://sakura0416710.github.io/mini-projects/image/prada.png",
-  "용기가 필요한 Girl": "https://sakura0416710.github.io/mini-projects/image/prada2.png"
+  "용기가 필요한 Girl": "https://sakura0416710.github.io/mini-projects/image/prada2.jpeg"
 };
 
 
