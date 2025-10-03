@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "트위드로 종결": "./image/chanel2.jpeg",
   "추위도 멋은 포기모태": "./image/vvw.jpeg",
   "러블리의 인간화": "./image/shushu.jpeg",
-  "이 구역 깜찍큩걸": "../image/miumiu.jpeg",
+  "이 구역 깜찍큩걸": "./image/miumiu.jpeg",
   "러블리 으른ver": "./image/shushu2.jpeg",
   "꾸안꾸 미우미우걸": "./image/miumiu2.jpeg",
   "성수동 점령가능룩": "./image/bm.jpeg",
