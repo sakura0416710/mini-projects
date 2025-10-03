@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultTitle.textContent = itemName;
 
     // 매핑 객체에서 이미지 경로 가져오기
-    const imgPath = itemImageMap[itemName] || "./image/default.png"; 
+    const imgPath = itemImageMap[itemName] || "https://sakura0416710.github.io/mini-projects/image/default.png"; 
     resultImage.src = imgPath;
   }, 1000);
 }
