@@ -145,40 +145,8 @@ a {
 }
 
 
-/* Responsive improvements */
-@media (max-width: 480px) {
-  .iphone-plus {
-    min-width: 320px;
-  }
 
-  .game-area {
-    left: 8px;
-    width: calc(100% - 16px);
-  }
 
-  .img {
-    left: 20px;
-    width: calc(100% - 40px);
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .main-title,
-  .main-start {
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .start-button:hover,
-  .nav-button:hover,
-  .character-item {
-    transition: none;
-    transform: none;
-  }
-}
 
 
 /* ===============list.css=================*/
@@ -287,7 +255,7 @@ a {
   height: 24px;
 }
 
-.img {
+.previous {
   left: 92px;
   position: absolute;
   top: 609px;
@@ -295,7 +263,7 @@ a {
   height: 24px;
 }
 /* 하단 재생 버튼 */
-.play-button img{
+.play-button{
   position: absolute;
   bottom: 20px; /* 화면 하단에서 20px */
   left: 50%;
@@ -306,7 +274,7 @@ a {
   bottom: 200px;
   left: 205px;
 }
-.pause-button img{
+.pause-button{
   position: absolute;
   bottom: 20px; /* 화면 하단에서 20px */
   left: 50%;
@@ -422,7 +390,7 @@ a {
 .next1,
 .next2,
 .play-arrow-filled-2,
-.img {
+.previous {
   cursor: pointer;
   border: none;
   background: transparent;
@@ -435,12 +403,11 @@ a {
 .next1,
 .next2,
 .play-arrow-filled-2,
-.img:hover {
+.previous:hover {
   cursor: pointer;
 }
 
-/* Focus management for interactive elements */
-.iphone-plus [role="button"] {
+.texta-wrapper:hover{
   cursor: pointer;
 }
 
