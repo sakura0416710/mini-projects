@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //3-1. 버튼 클릭 시 메인 화면으로
-  const allButtons = document.querySelectorAll(".play-button, .next1, .next2, .previous, .play-arrow-filled-2");
+  const allButtons = document.querySelectorAll(".pause-button, .play-button, .next1, .next2, .previous, .play-arrow-filled-2");
 
   allButtons.forEach(btn => {
     btn.addEventListener("click", resetToMain);
