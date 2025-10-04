@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const screenList = document.getElementById("screen-list");
   const screenResult = document.getElementById("screen-result");
   const menuBtn = document.querySelector(".menu");
+  const playBtn = document.querySelector(".previous");
+  const playBtn2 = document.querySelector(".play-arrow-filled-2");
+  const playBtn3 = document.querySelector(".next2");
+  const playBtn4 = document.querySelector(".next1");
 
   const items = document.querySelectorAll(".roulette-list-container h3");
   const resultTitle = document.getElementById("result-title");
@@ -75,12 +79,43 @@ document.addEventListener("DOMContentLoaded", () => {
     resultImage.src = `${imgPath}?v=${Date.now()}`; // 캐시 방지
   }
 
-//3-1. 메뉴 버튼 클릭 시 메인 화면으로
+//3-1. 버튼 클릭 시 메인 화면으로
   menuBtn.addEventListener("click", () => {
   screenResult.style.display = "none";
   screenMain.style.display = "block";
+  resultTitle.textContent = "";
+  resultImage.src = ""; 
+  });
+  
+  playBtn.addEventListener("click", () => {
+  screenResult.style.display = "none";
+  screenMain.style.display = "block";
+  resultTitle.textContent = "";
+  resultImage.src = ""; 
 
-  // 결과 화면 초기화
+  });
+
+  playBtn2.addEventListener("click", () => {
+  screenResult.style.display = "none";
+  screenMain.style.display = "block";
+  resultTitle.textContent = "";
+  resultImage.src = ""; 
+
+  });
+
+  playBtn3.addEventListener("click", () => {
+  screenResult.style.display = "none";
+  screenMain.style.display = "block";
+  resultTitle.textContent = "";
+  resultImage.src = ""; 
+
+  });
+
+
+  playBtn4.addEventListener("click", () => {
+  screenResult.style.display = "none";
+  screenMain.style.display = "block";
+
   resultTitle.textContent = "";
   resultImage.src = ""; 
 
