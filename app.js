@@ -79,32 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  //2-1. 리스트 객체 관리
-  const itemImageMap = {
-  "오늘의 커리어우먼은 바로 나": "https://sakura0416710.github.io/mini-projects/image/the_row2.png",
-  "깔끔 러블리걸": "https://sakura0416710.github.io/mini-projects/image/the_row3.png",
-  "올화이트룩": "https://sakura0416710.github.io/mini-projects/image/the_row.png",
-  "말해뭐해 가을의 르메르": "https://sakura0416710.github.io/mini-projects/image/remaire2.png",
-  "디테일의 신": "https://sakura0416710.github.io/mini-projects/image/remaire2.png",
-  "도쿄 멋쟁이": "https://sakura0416710.github.io/mini-projects/image/nanamica.png",
-  "쟤니?죄니": "https://sakura0416710.github.io/mini-projects/image/chanel.jpeg",
-  "트위드로 종결": "https://sakura0416710.github.io/mini-projects/image/chanel2.png",
-  "추위도 멋은 포기모태": "https://sakura0416710.github.io/mini-projects/image/vvw.png",
-  "러블리의 인간화": "https://sakura0416710.github.io/mini-projects/image/shushu.png",
-  "이 구역 깜찍큩걸": "https://sakura0416710.github.io/mini-projects/image/miumiu.png",
-  "러블리 으른ver": "https://sakura0416710.github.io/mini-projects/image/shushu2.jpeg",
-  "꾸안꾸 미우미우걸": "https://sakura0416710.github.io/mini-projects/image/miumiu2.png",
-  "성수동 점령가능룩": "https://sakura0416710.github.io/mini-projects/image/bm.png",
-  "퇴근하고 한남동으로 모여": "https://sakura0416710.github.io/mini-projects/image/balenciaga.png",
-  "미우미우인간의 가을룩": "https://sakura0416710.github.io/mini-projects/image/miumiu3.png",
-  "인스타 여신은 바로 나": "https://sakura0416710.github.io/mini-projects/image/bm2.png",
-  "고어텍스 한 스푼": "https://sakura0416710.github.io/mini-projects/image/act2.png",
-  "편하고 멋지고 다해버려": "https://sakura0416710.github.io/mini-projects/image/act1.png",
-  "당신의 고급미에 치얼스": "https://sakura0416710.github.io/mini-projects/image/ysl.png",
-  "Back to 90's": "https://sakura0416710.github.io/mini-projects/image/jil_sander.png",
-  "차분한 블랙 & 화이트": "https://sakura0416710.github.io/mini-projects/image/prada.png",
-  "용기가 필요한 Girl": "https://sakura0416710.github.io/mini-projects/image/prada2.jpeg"
-};
+ 
 
 
   // 3. 결과 화면 표시
@@ -118,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     resultTitle.textContent = itemName;
 
     // 매핑 객체에서 이미지 경로 가져오기
-    const imgPath = itemImageMap[itemName] || "https://sakura0416710.github.io/mini-projects/image/default.png"; 
-    resultImage.src = imgPath;
+    const imgPath =  finalItem.dataset.img || "https://sakura0416710.github.io/mini-projects/image/default.png"; 
+  
     // 캐시 방지용 쿼리스트링 추가
     resultImage.src = `${imgPath}?v=${new Date().getTime()}`;
   }, 1000);
