@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rouletteInterval = setInterval(() => {
       // 모든 아이템 초기화
       items.forEach(item => item.style.backgroundColor = "");
+      items.style.color = ""; 
 
       // 현재 인덱스 하이라이트
       items[currentIndex].style.backgroundColor = "#e9caf1e0";
@@ -119,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 매핑 객체에서 이미지 경로 가져오기
     const imgPath = itemImageMap[itemName] || "https://sakura0416710.github.io/mini-projects/image/default.png"; 
     resultImage.src = imgPath;
+    // 캐시 방지용 쿼리스트링 추가
+    resultImage.src = `${imgPath}?v=${new Date().getTime()}`;
   }, 1000);
 }
 
