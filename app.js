@@ -42,11 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (round > maxRounds) {
             // 멈출 위치 결정
             const stopIndex = Math.floor(Math.random() * items.length);
-            items[stopIndex].style.backgroundColor = "#e9caf1e0";
-            items[stopIndex].style.color = "#fff";
-
-            showResult(items[stopIndex]);
-            return;
+            const stopItem = items[stopIndex];
+            
+            if(stopItem) {
+            stopItem.style.backgroundColor = "#e9caf1e0";
+            stopItem.style.color = "#fff";
+            showResult(stopItem);
+          }
+          return;
           }
 
           // 속도 점점 느려지게
