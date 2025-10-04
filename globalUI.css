@@ -31,6 +31,15 @@ button:focus-visible {
 a {
   text-decoration: none;
 }
+.image, .image-2, .element, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9 {
+  transition: transform 0.2s ease; /* 부드럽게 확대 */
+}
+.image, .image-2, .element, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9:hover {
+  transform: scale(1.1); /* 10% 확대 */
+  cursor: pointer;
+}
+
+
 /* ===========main CSS====================*/
 .iphone-plus .main-screen {
   display: flex;

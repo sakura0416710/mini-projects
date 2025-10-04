@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const screenList = document.getElementById("screen-list");
   const screenResult = document.getElementById("screen-result");
   const menuBtn = document.querySelector(".menu");
-  const playBtn = document.querySelector(".previous");
-  const playBtn2 = document.querySelector(".play-arrow-filled-2");
-  const playBtn3 = document.querySelector(".next2");
-  const playBtn4 = document.querySelector(".next1");
 
   const items = document.querySelectorAll(".roulette-list-container h3");
   const resultTitle = document.getElementById("result-title");
@@ -79,45 +75,30 @@ document.addEventListener("DOMContentLoaded", () => {
     resultImage.src = `${imgPath}?v=${Date.now()}`; // 캐시 방지
   }
 
+
 //3-1. 버튼 클릭 시 메인 화면으로
-  menuBtn.addEventListener("click", () => {
-  screenResult.style.display = "none";
-  screenMain.style.display = "block";
-  resultTitle.textContent = "";
-  resultImage.src = ""; 
-  });
-  
-  playBtn.addEventListener("click", () => {
-  screenResult.style.display = "none";
-  screenMain.style.display = "block";
-  resultTitle.textContent = "";
-  resultImage.src = ""; 
+  const allButtons = document.querySelectorAll(".pause-button, .play-button, .next1, .next2, .previous, .play-arrow-filled-2");
 
+  allButtons.forEach(btn => {
+    btn.addEventListener("click", resetToMain);
   });
 
-  playBtn2.addEventListener("click", () => {
-  screenResult.style.display = "none";
-  screenMain.style.display = "block";
-  resultTitle.textContent = "";
-  resultImage.src = ""; 
+  menuBtn.addEventListener("click", resetToMain);
 
+
+  const stickerImages = document.querySelectorAll(".image, .image-2, .element, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9");
+  stickerImages.forEach(img => {
+    img.addEventListener("click", resetToMain);
   });
 
-  playBtn3.addEventListener("click", () => {
-  screenResult.style.display = "none";
-  screenMain.style.display = "block";
-  resultTitle.textContent = "";
-  resultImage.src = ""; 
-
-  });
-
-
-  playBtn4.addEventListener("click", () => {
+// 메인 화면으로 초기화 함수
+  function resetToMain() {
   screenResult.style.display = "none";
   screenMain.style.display = "block";
 
+  // 결과 화면 초기화
   resultTitle.textContent = "";
   resultImage.src = ""; 
+}
 
-  });
 });
