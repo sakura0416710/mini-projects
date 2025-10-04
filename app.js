@@ -19,17 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
     startRoulette();
   });
 
-  // 2. 룰렛 시작
+  // 2. 룰렛 시작 (setTimeout 재귀 구조)
   function startRoulette() {
+    const maxRounds = 25; 
     let currentIndex = 0;
-    let speed = 100; // 처음 속도(ms)
-    let round = 0;   // 회전 수
-    const maxRounds = 25; // 충분히 돌도록
+    let round = 0;
+    let speed = 100;
 
-    rouletteInterval = setInterval(() => {
+    function step() {
       // 모든 아이템 초기화
-      items.forEach(item => item.style.backgroundColor = "");
-      items.style.color = ""; 
+      items.forEach(item => {
+        item.style.backgroundColor = "";
+        item.style.color = "";
+      });
 
       // 현재 인덱스 하이라이트
       items[currentIndex].style.backgroundColor = "#e9caf1e0";
@@ -37,76 +39,47 @@ document.addEventListener("DOMContentLoaded", () => {
       currentIndex = (currentIndex + 1) % items.length;
       round++;
 
-      // 속도를 점점 줄임
-      if (round > maxRounds) {
-        clearInterval(rouletteInterval);
+    if (round > maxRounds) {
+            // 멈출 위치 결정
+            const stopIndex = Math.floor(Math.random() * items.length);
+            items[stopIndex].style.backgroundColor = "#e9caf1e0";
+            items[stopIndex].style.color = "#fff";
 
-        // 랜덤 멈춤 위치 결정
-        const stopIndex = Math.floor(Math.random() * items.length);
-        showResult(items[stopIndex]);
-      } else if (round > maxRounds * 0.6) {
-        speed += 40; // 후반부에서 느려짐
-        clearInterval(rouletteInterval);
-        rouletteInterval = setInterval(startRouletteStep, speed);
+            showResult(items[stopIndex]);
+            return;
+          }
+
+          // 속도 점점 느려지게
+          if (round > maxRounds * 0.6) speed += 30;
+
+          setTimeout(step, speed);
+        }
+
+        step(); // 시작
       }
-    }, speed);
-
-    // interval 내부에서 갱신을 위해 별도 함수로 분리
-    function startRouletteStep() {
-      // 모든 아이템 초기화
-      items.forEach(item => item.style.backgroundColor = "");
-
-      // 현재 인덱스 하이라이트
-      items[currentIndex].style.backgroundColor = "#e9caf1e0";
-      currentIndex = (currentIndex + 1) % items.length;
-      round++;
-
-      // 속도를 점점 줄임
-      if (round > maxRounds) {
-        clearInterval(rouletteInterval);
-
-        // 랜덤 멈춤 위치
-        const stopIndex = Math.floor(Math.random() * items.length);
-        items[stopIndex].style.backgroundColor = "#e9caf1e0"; //선택된 부분 색깔
-        items[stopIndex].style.color = "#fff";
-        
-        showResult(items[stopIndex]);
-      } else if (round > maxRounds * 0.6) {
-        speed += 30; // 느려짐
-        clearInterval(rouletteInterval);
-        rouletteInterval = setInterval(startRouletteStep, speed);
-      }
-    }
-  }
 
  
 
 
   // 3. 결과 화면 표시
   function showResult(finalItem) {
-    setTimeout(() => {
-      screenList.style.display = "none";
-      screenResult.style.display = "block";
+    screenList.style.display = "none";
+    screenResult.style.display = "block";
 
-      // 선택된 아이템 텍스트
-    const itemName = finalItem.textContent.trim();
-    resultTitle.textContent = itemName;
+    resultTitle.textContent = finalItem.textContent.trim();
 
-    // 매핑 객체에서 이미지 경로 가져오기
-    const imgPath =  finalItem.dataset.img || "https://sakura0416710.github.io/mini-projects/image/default.png"; 
-  
-    // 캐시 방지용 쿼리스트링 추가
-    resultImage.src = `${imgPath}?v=${new Date().getTime()}`;
-  }, 1000);
-}
-
-
+    const imgPath = finalItem.dataset.img || "https://sakura0416710.github.io/mini-projects/image/default.png";
+    resultImage.src = `${imgPath}?v=${Date.now()}`; // 캐시 방지
+  }
 
 //3-1. 메뉴 버튼 클릭 시 메인 화면으로
   menuBtn.addEventListener("click", () => {
   screenResult.style.display = "none";
   screenMain.style.display = "block";
 
+  // 결과 화면 초기화
+  resultTitle.textContent = "";
+  resultImage.src = ""; 
 
   });
 });
